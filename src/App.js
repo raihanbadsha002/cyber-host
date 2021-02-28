@@ -1,25 +1,52 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Particles from 'react-particles-js';
+import Navbar from './components/Navbar';
+import Header from './components/Header';
+import Services from './components/Services';
+import About from './components/About';
+import Price from './components/Price';
+import Contact from './components/Contact';
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+  
+return (
+  <>
+    <Particles
+      params={{
+        particles:{
+          number: {
+            value: 30,
+            density: {
+              enable: true,
+              value_area: 900
+            }
+          },
+          shape:{
+            type: "square",
+            stroke: {
+              width: 6,
+              color: "#2DBE60"
+            }
+          }
+        }
+      }}
+    />
+    <Navbar/>
+    <Header/>
+    <Services/>
+    <About/>
+    <Price/>
+    <Contact/>
+    <div className="container-fluid text-center bg-dark text-white py-4">
+       Copyright © 2021 CyberHost All Rights Reserved by MD.Raihan Badsha.
     </div>
-  );
+  </>  
+)
+
+
 }
 
 export default App;

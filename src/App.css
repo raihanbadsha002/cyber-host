@@ -1,38 +1,231 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
+
+:root{
+  --white: #fff;
+  --navbg: #5a5454;
+  --dark: #000;
+  --green: #2DBE60;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+/* ***********NAVBAR******************** */
+nav{
+  z-index: 2;
+}
+.navBg{
+ background-color: var(--navbg);
+}
+.nav-link{
+  margin: 0 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase; 
+  letter-spacing: 0.063rem;
+  color: var(--white) !important;
+  border-top: 0.1875rem solid rgba(255, 255, 255, 0)
+}
+.navbar-nav > li > a:focus, .navbar-nav > li > a:hover{
+  border-top: 0.1875rem solid  var(--green);
+}
+.menuIcon img{
+  width: 1.8rem;
+}
+
+/* ******************HEADER****************** */
+.header-warper{
+  position: relative;
+  background-image: linear-gradient( rgba(0, 0, 0, 0.5) 100%, rgba(0, 0, 0, 0.5)100%), url("./images/s1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+}
+.main-info{
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.main-info h1{
+  color: #23e467;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3rem;
+}
+.typed-text{
+  color: var(--white);
+  font-size: 2rem;
+}
+.btn-contact{
+  border:0.063rem solid var(--white);
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white);
+  cursor: pointer;
+  margin-top: 1.4rem;
+}
+.btn-contact:hover{
+  background: var(--green);
+  color: var(--white);
+  border: 0.063rem solid rgba(0, 0, 0, 0);
+}
+
+/* ******* */
+.tsparticles-canvas-el{
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+/* ********SERVICES************* */
+.services__main__div{
+  background: #1f2235;
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+  padding: 6rem 0;
+}
+.common__header{
+  width: 41.50%;
+}
+.heading{
+  color: var(--green);
+  font-size: 1rem;
+  letter-spacing: .2rem;
+}
+.main__header {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.common__content{
+  font-size: 0.9rem;
+  color: #e0dcdc;
+  margin-bottom: 2rem;
+}
+.common__border{
+  background-color: var(--green);
+  height: 0.2rem;
+  width: 8rem;
+  margin: 0 auto;
+  
+}
+/* *** */
+.services__box{
+ background: #23263a;
+ transition: .3s all ease-in-out;
+ cursor: pointer;
+}
+.services__box:hover{
+ background: var(--green);
+ color: #fff;
+}
+.services__box:hover .service__icons{
+ color: #fff;
+ transform: rotateY(360deg);
+}
+.services__box:hover .services__box__content{
+ color: #fff;
+}
+.service__icons{
+  font-size: 2.2rem;
+  color: var(--green);
+  transition: .8s all ease-in-out;
+  
+}
+.services__box__header{
+  margin: 0.8rem 0;
+  font-size: 1.4rem;
+}
+.services__box__content{
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #e0dcdc;
+}
+/* ********About********* */
+.about__main__div{
+  background: #23263a;
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+  padding: 6rem 0;
+}
+.grayColor{
+  color: #d8d8d8;
+  font-size: 1.1rem;
+}
+.about__label{
+  font-size: 1.1rem;
+  color: var(--green);
+}
+/* ****Prices****** */
+.prices__main__div{
+  background: #1f2235;
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+  padding: 6rem 0;
+}
+.price__box{
+  background: #23263a;
+  padding: 15px 48px 15px 15px;
+  border-radius: 8px;
+  margin: 38px 5px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.priceHeading{
+  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.7rem;
+  padding: 1rem 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.price{
+  font-weight: 100;
+  font-family: 'Roboto', sans-serif;
+  font-size: 4rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.price span{
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 8px;
 }
-
-.App-link {
-  color: #61dafb;
+.price__box li{
+list-style: none;
+padding: 1.2rem 0;
+color: #dfdbdb;
+border-bottom: 1px solid var(--green);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.purchase__btn{
+  border: 1px solid var(--green);
+  padding: .5rem 2rem;
+  border-radius: 2rem;
+  background: var(--green);
+  color: var(--white);
+  transition: all .3s ease-in-out;
+}
+.purchase__btn:hover{
+  background: #23263a;
+  border: 1px solid var(--white)
+}
+/* ****Contact Section******** */
+.contact__main__div{
+  background: #23263a;
+  color: var(--white);
+  font-family: 'Roboto', sans-serif;
+  padding: 6rem 0;
+}
+.field-dark{
+  background: #1f2235 !important;
+  padding: 1rem !important;
+  color: var(--white) !important;
+  border:1px solid #23263a !important;
+}
+/* Media Quire**** */
+@media (max-width: 575.98px) { 
+  .main-info h1 {
+    font-size: 2.1rem;
+}
+.common__header {
+  width: 80.5%;
+}
 }

@@ -6,7 +6,7 @@ const Header = () => {
         <div>
             <div className="header-warper">
                 <div className="main-info d-flex flex-column position-absolute justify-content-center align-items-center">
-                    <h1>Websites Design & Web Development</h1>
+                    <h1>Unique Websites Design & Web Development</h1>
                     <Typed
                        className='typed-text'
                        strings={[
@@ -17,7 +17,7 @@ const Header = () => {
                         backSpeed={50}
                         loop
                     />
-                    <a href="#" className="btn-contact">Contact me</a>
+                    <a href="/" className="btn-contact">Contact me</a>
                 </div>
             </div>
         </div>

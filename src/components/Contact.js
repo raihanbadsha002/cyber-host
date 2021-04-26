@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Contact = () => {
     const[contactHeader] = React.useState({
         mainHeader: "HAVE ANY QUERY?" ,
@@ -8,8 +9,7 @@ const Contact = () => {
  
      });
     return (
-        <div>
-            <div className="contact__main__div">
+            <div className="contact__main__div" id="conatct">
               <div className="container">
                 <div className="d-flex justify-content-center">
                 <div className="common__header text-center">
@@ -38,7 +38,7 @@ const Contact = () => {
                 </form>
               </div>
             </div>
-        </div>
+           
     );
 };
 
